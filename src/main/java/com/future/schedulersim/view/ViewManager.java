@@ -28,7 +28,7 @@ public class ViewManager {
 
     public void showAddProcessWindow() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/new-process-view.fxml"));
-        WindowProperties window = new WindowProperties(fxmlLoader,"Add New Process", 550, 300);
+        WindowProperties window = new WindowProperties(fxmlLoader,"Add New Process", 550, 400);
         renderSubStage(window);
     }
 

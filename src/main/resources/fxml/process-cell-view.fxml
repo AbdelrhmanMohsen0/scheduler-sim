@@ -8,30 +8,34 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="891.0" styleClass="table-row" stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.future.schedulersim.controller.ProcessCellController">
-   <children>
-      <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefHeight="52.0" prefWidth="145.0" styleClass="table-cell" text="P1" textAlignment="CENTER" />
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefHeight="52.0" prefWidth="145.0" styleClass="table-cell" text="0" textAlignment="CENTER" />
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefHeight="52.0" prefWidth="145.0" styleClass="table-cell" text="5" textAlignment="CENTER" />
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefHeight="52.0" prefWidth="145.0" text="2" textAlignment="CENTER" />
-         </children>
-      </HBox>
-      <Button focusTraversable="false" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="29.0" prefWidth="29.0" styleClass="delete-btn" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="10.0">
-         <graphic>
-            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../icons/Trash.png" />
-               </image>
-            </ImageView>
-         </graphic>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-   </children>
+<AnchorPane minHeight="-Infinity" prefHeight="50.0" prefWidth="891.0" styleClass="table-row"
+            stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.future.schedulersim.controller.ProcessCellController">
    <cursor>
-      <Cursor fx:constant="HAND" />
+      <Cursor fx:constant="HAND"/>
    </cursor>
+   <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+         AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Label fx:id="processNameLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity"
+             prefHeight="52.0" prefWidth="145.0" styleClass="table-cell" text="P1" textAlignment="CENTER"/>
+      <Label fx:id="arrivalTimeLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity"
+             prefHeight="52.0" prefWidth="145.0" styleClass="table-cell" text="0" textAlignment="CENTER"/>
+      <Label fx:id="burstTimeLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity"
+             prefHeight="52.0" prefWidth="145.0" styleClass="table-cell" text="5" textAlignment="CENTER"/>
+      <Label fx:id="priorityLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity"
+             prefHeight="52.0" prefWidth="145.0" text="2" textAlignment="CENTER"/>
+   </HBox>
+   <Button fx:id="deleteButton" focusTraversable="false" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity"
+           minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="29.0" prefWidth="29.0"
+           styleClass="delete-btn" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="16.0"
+           AnchorPane.topAnchor="10.0">
+      <graphic>
+         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../icons/Trash.png"/>
+         </ImageView>
+      </graphic>
+      <cursor>
+         <Cursor fx:constant="HAND"/>
+      </cursor>
+   </Button>
 </AnchorPane>
