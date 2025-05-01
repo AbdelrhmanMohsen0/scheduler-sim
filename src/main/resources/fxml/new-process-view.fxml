@@ -28,7 +28,7 @@
                 </font>
             </Label>
             <HBox spacing="15.0">
-                <Label maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefHeight="35.0" prefWidth="130.0" style="-fx-font-weight: bold; -fx-font-size: 18;" styleClass="main-title" text="ProcessName" />
+                <Label maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefHeight="35.0" prefWidth="130.0" style="-fx-font-weight: bold; -fx-font-size: 18;" styleClass="main-title" text="Process Name" />
                 <TextField fx:id="processNameField" prefHeight="30.0" prefWidth="226.0" style="-fx-font-size: 14; -fx-padding: 5;" />
             </HBox>
         </VBox>
