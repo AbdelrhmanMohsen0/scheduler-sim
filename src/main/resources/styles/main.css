@@ -1,0 +1,46 @@
+.process-pane {
+    -fx-border-color: #ddd;
+    -fx-border-width: 0 1 1 1;
+    -fx-border-radius: 0 0 6 6;
+    -fx-background-radius: 6;
+}
+.main-btn {
+    -fx-background-color: #212121;
+    -fx-font-weight: bold;
+}
+
+.sec-btn {
+    -fx-background-color: #ddd;
+    -fx-border-color: #aaa;
+    -fx-border-radius: 5;
+    -fx-text-fill: #666;
+    -fx-font-weight: bold;
+}
+
+.main-title {
+    -fx-text-fill: #666;
+}
+
+.table-cell {
+    -fx-border-color: #ddd;
+    -fx-border-width: 0 1 0 0;
+}
+
+.table-row:hover {
+    -fx-background-color: #eee;
+}
+.table-head {
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-weight: bold;
+    -fx-background-color: #eee;
+    -fx-border-color: #ddd;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-radius: 6 6 0 0;
+    -fx-background-radius: 6 6 0 0;
+}
+.delete-btn {
+    -fx-background-color: transparent;
+}
+.delete-btn:hover {
+    -fx-background-color: #ddd;
+}
