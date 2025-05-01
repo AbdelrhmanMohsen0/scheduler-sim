@@ -40,21 +40,20 @@
                <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="52.0" prefWidth="145.0" text="Priority" textAlignment="CENTER" />
             </HBox>
             <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" styleClass="process-pane">
-               <VBox fx:id="processesContainer" minHeight="-Infinity">
-                  <fx:include source="process-cell-view.fxml" />
-                  <fx:include source="process-cell-view.fxml" />
-                  <fx:include source="process-cell-view.fxml" />
-                  <fx:include source="process-cell-view.fxml" />
-                  <fx:include source="process-cell-view.fxml" />
-                  <fx:include source="process-cell-view.fxml" />
-                  <fx:include source="process-cell-view.fxml" />
-                  <fx:include source="process-cell-view.fxml" />
-                  <fx:include source="process-cell-view.fxml" />
-                  <fx:include source="process-cell-view.fxml" />
-                  <fx:include source="process-cell-view.fxml" />
-                  <fx:include source="process-cell-view.fxml" />
-                  <fx:include source="process-cell-view.fxml" />
-               </VBox>
+               <AnchorPane>
+                  <children>
+                     <VBox fx:id="processesContainer" minHeight="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     <StackPane fx:id="noProcessesPane" maxHeight="-Infinity" prefHeight="286.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Label contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.18" styleClass="title-2" text="NO PROCESSES ADDED">
+                           <graphic>
+                              <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                                 <Image url="@../icons/Unavailable.png" />
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </StackPane>
+                  </children>
+               </AnchorPane>
             </ScrollPane>
          </VBox>
          <Button fx:id="addNewProcessButton" focusTraversable="false" layoutX="779.0" layoutY="1.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="152.0" text="Add New Process" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0">
@@ -96,15 +95,6 @@
                   </cursor>
                </Button>
             </HBox>
-         </StackPane>
-         <StackPane fx:id="noProcessesPane" visible="false" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
-            <Label contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.18" styleClass="title-2" text="NO PROCESSES ADDED">
-               <graphic>
-                  <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
-                     <Image url="@../icons/Unavailable.png" />
-                  </ImageView>
-               </graphic>
-            </Label>
          </StackPane>
       </AnchorPane>
    </center>
