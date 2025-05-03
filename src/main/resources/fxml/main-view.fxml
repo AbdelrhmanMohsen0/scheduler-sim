@@ -76,7 +76,7 @@
                      <String fx:value="sec-btn" />
                   </styleClass>
                </Button>
-               <Button fx:id="ganttChartButton" focusTraversable="false" mnemonicParsing="false" prefHeight="36.0" prefWidth="166.0" text="Generate Gantt Chart">
+               <Button fx:id="ganttChartButton" disable="true" focusTraversable="false" mnemonicParsing="false" prefHeight="36.0" prefWidth="166.0" text="Generate Gantt Chart">
                   <styleClass>
                      <String fx:value="accent" />
                      <String fx:value="main-btn" />
@@ -85,7 +85,7 @@
                      <Cursor fx:constant="HAND" />
                   </cursor>
                </Button>
-               <Button fx:id="reportButton" focusTraversable="false" mnemonicParsing="false" prefHeight="36.0" prefWidth="166.0" text="Generate Report">
+               <Button fx:id="reportButton" disable="true" focusTraversable="false" mnemonicParsing="false" prefHeight="36.0" prefWidth="166.0" text="Generate Report">
                   <styleClass>
                      <String fx:value="accent" />
                      <String fx:value="main-btn" />

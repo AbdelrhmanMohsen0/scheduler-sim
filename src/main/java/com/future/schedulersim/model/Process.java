@@ -2,27 +2,17 @@ package com.future.schedulersim.model;
 
 public class Process {
     private String processName;
-    private int numberOfTheProcess;
     private int arrivalTime;
     private int burstTime;
     private int priority;
 
     public Process() {}
 
-    public Process(String processName, int numberOfTheProcess, int arrivalTime, int burstTime, int priority) {
+    public Process(String processName, int arrivalTime, int burstTime, int priority) {
         this.processName = processName;
-        this.numberOfTheProcess = numberOfTheProcess;
         this.arrivalTime = arrivalTime;
         this.burstTime = burstTime;
         this.priority = priority;
-    }
-
-    public int getNumberOfTheProcess() {
-        return numberOfTheProcess;
-    }
-
-    public void setNumberOfTheProcess(int numberOfTheProcess) {
-        this.numberOfTheProcess = numberOfTheProcess;
     }
 
     public String getProcessName() {

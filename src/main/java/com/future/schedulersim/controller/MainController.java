@@ -1,6 +1,7 @@
 package com.future.schedulersim.controller;
 
 import com.future.schedulersim.core.ProcessManager;
+import com.future.schedulersim.model.ProcessNodeData;
 import com.future.schedulersim.view.ComponentGenerator;
 import com.future.schedulersim.view.ViewManager;
 import javafx.collections.ListChangeListener;
@@ -13,6 +14,7 @@ import javafx.scene.layout.VBox;
 import com.future.schedulersim.model.Process;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
@@ -29,6 +31,7 @@ public class MainController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         addNewProcessButton.setOnAction(_ -> onAddNewProcess());
         clearButton.setOnAction(_ -> onClear());
+        ganttChartButton.setOnAction(_ -> onGanttChart());
         processList.addListener((ListChangeListener<Process>) _ -> {
             processesContainer.getChildren().clear();
             if (processList.isEmpty()) {
@@ -37,11 +40,24 @@ public class MainController implements Initializable {
             }
             noProcessesPane.setVisible(false);
             noProcessesPane.setManaged(false);
+            ganttChartButton.setDisable(false);
+            reportButton.setDisable(false);
             for (Process process : processList) {
                 processesContainer.getChildren().add(createProcessPane(process));
             }
         });
 
+    }
+
+    private void onGanttChart() {
+        List<ProcessNodeData> processNodeDataList = ProcessManager.getInstance().getGanttChartList();
+        for (ProcessNodeData process : processNodeDataList) {
+            System.out.print(process.getProcessName() + "\t");
+        }
+        System.out.println();
+        for (ProcessNodeData process : processNodeDataList) {
+            System.out.print(process.getStartTime() + ", " + process.getEndTime() + "\t");
+        }
     }
 
     private void onClear() {
@@ -61,5 +77,7 @@ public class MainController implements Initializable {
     private void handleNoProcesses() {
         noProcessesPane.setVisible(true);
         noProcessesPane.setManaged(true);
+        ganttChartButton.setDisable(true);
+        reportButton.setDisable(true);
     }
 }
