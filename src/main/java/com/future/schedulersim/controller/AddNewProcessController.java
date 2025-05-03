@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.function.UnaryOperator;
 
 public class AddNewProcessController implements Initializable {
 
@@ -20,12 +21,18 @@ public class AddNewProcessController implements Initializable {
     public Button addProcessButton;
     public Button cancelButton;
 
+    private final UnaryOperator<TextFormatter.Change> numericFilter = change -> {
+        String newText = change.getControlNewText();
+        return newText.matches("\\d*") ? change : null;
+    };
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         addProcessButton.setOnAction(_ -> onAdd());
         cancelButton.setOnAction(_ -> onCancel());
         setSpinners(burstTimeSpinner, prioritySpinner);
         arrivalTimeSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, Integer.MAX_VALUE, 0, 1));
+        arrivalTimeSpinner.getEditor().setTextFormatter(new TextFormatter<>(numericFilter));
         processNameField.setText(ProcessManager.getInstance().getRecommendedProcessName());
         processNameField.setOnKeyTyped(_ -> processNameError.setVisible(false));
     }
@@ -34,6 +41,7 @@ public class AddNewProcessController implements Initializable {
     private void setSpinners(Spinner<Integer>... spinners) {
         for (Spinner<Integer> spinner : spinners) {
             spinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, Integer.MAX_VALUE, 1, 1));
+            spinner.getEditor().setTextFormatter(new TextFormatter<>(numericFilter));
         }
     }
 

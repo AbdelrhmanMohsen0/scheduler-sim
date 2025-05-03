@@ -32,6 +32,12 @@ public class ViewManager {
         renderSubStage(window);
     }
 
+    public void showGanttChartWindow() {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/gantt-chart-view.fxml"));
+        WindowProperties window = new WindowProperties(fxmlLoader,"Gantt Chart", 1000, 620);
+        renderSubStage(window);
+    }
+
     private void renderStage(WindowProperties window) {
         Stage stage = createStage(window);
         assert stage != null;

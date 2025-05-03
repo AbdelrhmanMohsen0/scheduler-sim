@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.future.schedulersim.controller.FirstGanttChartCellController">
+   <Label fx:id="processNameLabel" alignment="CENTER" style="-fx-background-color: #212121; -fx-border-color: #444; -fx-border-width: 4; -fx-text-fill: white;" styleClass="title-1" text="P1" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   <Label fx:id="startTimeLabel" alignment="CENTER" layoutX="-11.0" layoutY="120.0" prefHeight="36.0" prefWidth="82.0" style="-fx-text-fill: #212121;" styleClass="title-3" text="19" AnchorPane.leftAnchor="-38.0" AnchorPane.topAnchor="120.0" />
+   <AnchorPane layoutX="10.0" layoutY="94.0" prefHeight="41.0" prefWidth="100.0" style="-fx-border-color: #444; -fx-border-width: 0  5;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
+   <Label fx:id="endTimeLabel" alignment="CENTER" layoutX="-1.0" layoutY="130.0" prefHeight="36.0" prefWidth="82.0" style="-fx-text-fill: #212121;" styleClass="title-3" text="19" AnchorPane.rightAnchor="-38.0" AnchorPane.topAnchor="120.0" />
+</AnchorPane>

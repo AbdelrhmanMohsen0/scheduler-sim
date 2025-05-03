@@ -50,14 +50,7 @@ public class MainController implements Initializable {
     }
 
     private void onGanttChart() {
-        List<ProcessNodeData> processNodeDataList = ProcessManager.getInstance().getGanttChartList();
-        for (ProcessNodeData process : processNodeDataList) {
-            System.out.print(process.getProcessName() + "\t");
-        }
-        System.out.println();
-        for (ProcessNodeData process : processNodeDataList) {
-            System.out.print(process.getStartTime() + ", " + process.getEndTime() + "\t");
-        }
+        ViewManager.getInstance().showGanttChartWindow();
     }
 
     private void onClear() {

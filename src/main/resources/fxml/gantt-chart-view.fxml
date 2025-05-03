@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane prefHeight="620.0" prefWidth="1000.0" style="-fx-border-color: #ddd; -fx-border-width: 1 0 0 0;" stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.future.schedulersim.controller.GanttChartController">
+    <Label alignment="CENTER" prefHeight="70.0" prefWidth="1000.0" style="-fx-background-color: #212121; -fx-text-fill: white;" styleClass="title-1" text="Gantt Chart" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+    <Button fx:id="closeButton" focusTraversable="false" layoutX="87.0" layoutY="474.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="113.0" text="Close" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0">
+        <cursor>
+          <Cursor fx:constant="HAND" />
+        </cursor>
+        <styleClass>
+          <String fx:value="accent" />
+          <String fx:value="sec-btn" />
+        </styleClass>
+    </Button>
+    <ScrollPane fitToHeight="true" fitToWidth="true" layoutY="143.0" prefHeight="314.0" prefWidth="860.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="142.0">
+        <StackPane>
+            <HBox fx:id="ganttChartCellsContainer" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="225.0">
+            <StackPane.margin>
+               <Insets left="10.0" right="10.0" />
+            </StackPane.margin>
+            </HBox>
+        </StackPane>
+    </ScrollPane>
+</AnchorPane>

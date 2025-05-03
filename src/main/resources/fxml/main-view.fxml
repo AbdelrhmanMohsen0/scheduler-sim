@@ -41,18 +41,20 @@
             </HBox>
             <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" styleClass="process-pane">
                <AnchorPane>
-                  <children>
-                     <VBox fx:id="processesContainer" minHeight="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                     <StackPane fx:id="noProcessesPane" maxHeight="-Infinity" prefHeight="286.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                        <Label contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.18" styleClass="title-2" text="NO PROCESSES ADDED">
-                           <graphic>
-                              <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
-                                 <Image url="@../icons/Unavailable.png" />
-                              </ImageView>
-                           </graphic>
-                        </Label>
-                     </StackPane>
-                  </children>
+                  <VBox fx:id="processesContainer" minHeight="-Infinity" AnchorPane.bottomAnchor="0.0"
+                        AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                  <StackPane fx:id="noProcessesPane" maxHeight="-Infinity" prefHeight="286.0"
+                             AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                             AnchorPane.topAnchor="0.0">
+                     <Label contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.18"
+                            styleClass="title-2" text="NO PROCESSES ADDED">
+                        <graphic>
+                           <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                              <Image url="@../icons/Unavailable.png"/>
+                           </ImageView>
+                        </graphic>
+                     </Label>
+                  </StackPane>
                </AnchorPane>
             </ScrollPane>
          </VBox>
