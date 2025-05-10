@@ -41,16 +41,12 @@
             </HBox>
             <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" styleClass="process-pane">
                <AnchorPane>
-                  <VBox fx:id="processesContainer" minHeight="-Infinity" AnchorPane.bottomAnchor="0.0"
-                        AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
-                  <StackPane fx:id="noProcessesPane" maxHeight="-Infinity" prefHeight="286.0"
-                             AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
-                             AnchorPane.topAnchor="0.0">
-                     <Label contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.18"
-                            styleClass="title-2" text="NO PROCESSES ADDED">
+                  <VBox fx:id="processesContainer" minHeight="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <StackPane fx:id="noProcessesPane" maxHeight="-Infinity" prefHeight="286.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <Label contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.18" styleClass="title-2" text="NO PROCESSES ADDED">
                         <graphic>
                            <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
-                              <Image url="@../icons/Unavailable.png"/>
+                              <Image url="@../icons/Unavailable.png" />
                            </ImageView>
                         </graphic>
                      </Label>
@@ -87,7 +83,7 @@
                      <Cursor fx:constant="HAND" />
                   </cursor>
                </Button>
-               <Button fx:id="reportButton" disable="true" focusTraversable="false" mnemonicParsing="false" prefHeight="36.0" prefWidth="166.0" text="Generate Report">
+               <Button fx:id="reportButton" disable="true" focusTraversable="false" mnemonicParsing="false" prefHeight="36.0" prefWidth="166.0" text="Metrics">
                   <styleClass>
                      <String fx:value="accent" />
                      <String fx:value="main-btn" />

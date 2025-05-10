@@ -1,7 +1,6 @@
 package com.future.schedulersim.core;
 
 import com.future.schedulersim.model.Process;
-import com.future.schedulersim.model.ProcessNodeData;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -41,10 +40,10 @@ public class ProcessManager {
         return false;
     }
 
-    public List<ProcessNodeData> getGanttChartList() {
+    public List<Process> getGanttChartList() {
         Queue<Process> processQueue = new LinkedList<>(processList.sorted(Comparator.comparingInt(Process::getArrivalTime)));
         PriorityQueue<Process> readyQueue = new PriorityQueue<>(Comparator.comparingInt(Process::getPriority));
-        List<ProcessNodeData> ganttChartList = new ArrayList<>();
+        List<Process> ganttChartList = new ArrayList<>();
 
         assignFirstProcess(processQueue, ganttChartList);
 
@@ -58,11 +57,9 @@ public class ProcessManager {
             if (!readyQueue.isEmpty() && ganttChartList.getLast().getEndTime() <= time) {
                 Process process = readyQueue.poll();
                 assert process != null;
-                ganttChartList.add(new ProcessNodeData(
-                        process.getProcessName(),
-                        time,
-                        time + process.getBurstTime()
-                ));
+                process.setStartTime(time);
+                process.setEndTime(time + process.getBurstTime());
+                ganttChartList.add(process);
             }
 
             time++;
@@ -71,14 +68,12 @@ public class ProcessManager {
         return ganttChartList;
     }
 
-    private void assignFirstProcess(Queue<Process> processQueue, List<ProcessNodeData> ganttChartList) {
+    private void assignFirstProcess(Queue<Process> processQueue, List<Process> ganttChartList) {
         Process firstProcess = processQueue.poll();
         assert firstProcess != null;
-        ganttChartList.add(new ProcessNodeData(
-                firstProcess.getProcessName(),
-                firstProcess.getArrivalTime(),
-                firstProcess.getArrivalTime() + firstProcess.getBurstTime()
-        ));
+        firstProcess.setStartTime(firstProcess.getArrivalTime());
+        firstProcess.setEndTime(firstProcess.getArrivalTime() + firstProcess.getBurstTime());
+        ganttChartList.add(firstProcess);
     }
 
 }

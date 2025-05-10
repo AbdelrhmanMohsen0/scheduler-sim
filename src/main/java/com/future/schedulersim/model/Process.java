@@ -5,14 +5,18 @@ public class Process {
     private int arrivalTime;
     private int burstTime;
     private int priority;
+    private int startTime;
+    private int endTime;
 
     public Process() {}
 
-    public Process(String processName, int arrivalTime, int burstTime, int priority) {
+    public Process(String processName, int arrivalTime, int burstTime, int priority, int startTime, int endTime) {
         this.processName = processName;
         this.arrivalTime = arrivalTime;
         this.burstTime = burstTime;
         this.priority = priority;
+        this.startTime = startTime;
+        this.endTime = endTime;
     }
 
     public String getProcessName() {
@@ -45,5 +49,21 @@ public class Process {
 
     public void setPriority(int priority) {
         this.priority = priority;
+    }
+
+    public int getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(int startTime) {
+        this.startTime = startTime;
+    }
+
+    public int getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(int endTime) {
+        this.endTime = endTime;
     }
 }

@@ -10,10 +10,10 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ProcessCellController implements Initializable {
-    public Label processNameLabel;
-    public Label arrivalTimeLabel;
-    public Label burstTimeLabel;
-    public Label priorityLabel;
+    public Label firstCell;
+    public Label secondCell;
+    public Label thirdCell;
+    public Label fourthCell;
     public Button deleteButton;
     private Process process;
     @Override
@@ -27,9 +27,9 @@ public class ProcessCellController implements Initializable {
 
     public void setProcessData(Process process) {
         this.process = process;
-        processNameLabel.setText(process.getProcessName());
-        arrivalTimeLabel.setText(String.valueOf(process.getArrivalTime()));
-        burstTimeLabel.setText(String.valueOf(process.getBurstTime()));
-        priorityLabel.setText(String.valueOf(process.getPriority()));
+        firstCell.setText(process.getProcessName());
+        secondCell.setText(String.valueOf(process.getArrivalTime()));
+        thirdCell.setText(String.valueOf(process.getBurstTime()));
+        fourthCell.setText(String.valueOf(process.getPriority()));
     }
 }

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="542.0" prefWidth="1000.0" style="-fx-background-color: #fefefe;" stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.future.schedulersim.controller.MetricsController">
+   <top>
+      <AnchorPane style="-fx-border-color: #ddd; -fx-border-width: 1 0 0 0;" BorderPane.alignment="CENTER">
+         <Label layoutX="35.0" layoutY="22.0" prefWidth="617.0" text="Metrics" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="20.0">
+            <styleClass>
+               <String fx:value="title-2" />
+               <String fx:value="main-title" />
+            </styleClass>
+         </Label>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="487.0" prefWidth="1000.0">
+         <VBox AnchorPane.bottomAnchor="114.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0">
+            <HBox minHeight="-Infinity" prefHeight="41.0" prefWidth="910.0" styleClass="table-head">
+               <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="52.0" prefWidth="145.0" styleClass="table-cell" text="Process" textAlignment="CENTER" />
+               <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="52.0" prefWidth="145.0" styleClass="table-cell" text="Waiting Time" textAlignment="CENTER" />
+               <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="52.0" prefWidth="145.0" styleClass="table-cell" text="Turnaround Time" textAlignment="CENTER" />
+               <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="52.0" prefWidth="145.0" text="Response Time" textAlignment="CENTER" />
+            </HBox>
+            <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" styleClass="process-pane">
+               <AnchorPane>
+                  <VBox fx:id="processesContainer" minHeight="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </AnchorPane>
+            </ScrollPane>
+         </VBox>
+         <Button fx:id="closeButton" focusTraversable="false" layoutX="40.0" layoutY="362.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="166.0" text="Close" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+            <styleClass>
+               <String fx:value="accent" />
+               <String fx:value="sec-btn" />
+            </styleClass>
+         </Button>
+      </AnchorPane>
+   </center>
+</BorderPane>

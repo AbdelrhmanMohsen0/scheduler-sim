@@ -1,7 +1,7 @@
 package com.future.schedulersim.controller;
 
 import com.future.schedulersim.core.ProcessManager;
-import com.future.schedulersim.model.ProcessNodeData;
+import com.future.schedulersim.model.Process;
 import com.future.schedulersim.view.ComponentGenerator;
 import javafx.application.Platform;
 import javafx.fxml.Initializable;
@@ -21,8 +21,8 @@ public class GanttChartController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         closeButton.setOnAction(_ -> onClose());
         Platform.runLater(() -> {
-            List<ProcessNodeData> processes = ProcessManager.getInstance().getGanttChartList();
-            ProcessNodeData firstProcess = processes.getFirst();
+            List<Process> processes = ProcessManager.getInstance().getGanttChartList();
+            Process firstProcess = processes.getFirst();
             ganttChartCellsContainer.getChildren().add(ComponentGenerator.generateCell(
                     "/fxml/first-gantt-chart-cell-view.fxml",
                     controller -> ((FirstGanttChartCellController) controller).setCellData(

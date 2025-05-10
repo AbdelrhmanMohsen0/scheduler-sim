@@ -38,6 +38,12 @@ public class ViewManager {
         renderSubStage(window);
     }
 
+    public void showMetricsWindow() {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/metrics-view.fxml"));
+        WindowProperties window = new WindowProperties(fxmlLoader,"Metrics", 1000, 542);
+        renderSubStage(window);
+    }
+
     private void renderStage(WindowProperties window) {
         Stage stage = createStage(window);
         assert stage != null;
