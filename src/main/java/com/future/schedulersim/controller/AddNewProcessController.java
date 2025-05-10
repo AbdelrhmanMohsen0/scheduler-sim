@@ -17,7 +17,7 @@ public class AddNewProcessController implements Initializable {
     public Spinner<Integer> burstTimeSpinner;
     public Spinner<Integer> prioritySpinner;
     public Label processNameError;
-    public Label priorityError;
+    public Label arrivalError;
     public Button addProcessButton;
     public Button cancelButton;
 
@@ -35,6 +35,7 @@ public class AddNewProcessController implements Initializable {
         arrivalTimeSpinner.getEditor().setTextFormatter(new TextFormatter<>(numericFilter));
         processNameField.setText(ProcessManager.getInstance().getRecommendedProcessName());
         processNameField.setOnKeyTyped(_ -> processNameError.setVisible(false));
+        arrivalTimeSpinner.setOnKeyTyped(_ -> arrivalError.setVisible(false));
     }
 
     @SafeVarargs
@@ -49,6 +50,10 @@ public class AddNewProcessController implements Initializable {
         Process process = new Process();
         if (ProcessManager.getInstance().isProcessNameExist(processNameField.getText())) {
             processNameError.setVisible(true);
+            return;
+        }
+        if (ProcessManager.getInstance().isProcessArrivalTimeExist(arrivalTimeSpinner.getValue())) {
+            arrivalError.setVisible(true);
             return;
         }
         loadProcessData(process);

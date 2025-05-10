@@ -40,6 +40,14 @@ public class ProcessManager {
         return false;
     }
 
+    public boolean isProcessArrivalTimeExist(int arrivalTime) {
+        for (Process process : processList) {
+            if (process.getArrivalTime() == arrivalTime)
+                return true;
+        }
+        return false;
+    }
+
     public List<Process> getGanttChartList() {
         Queue<Process> processQueue = new LinkedList<>(processList.sorted(Comparator.comparingInt(Process::getArrivalTime)));
         PriorityQueue<Process> readyQueue = new PriorityQueue<>(Comparator.comparingInt(Process::getPriority));
