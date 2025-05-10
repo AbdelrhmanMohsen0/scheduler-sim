@@ -65,7 +65,7 @@
          </Button>
          <StackPane layoutX="208.0" layoutY="422.0" prefHeight="86.0" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
             <HBox maxHeight="-Infinity" maxWidth="-Infinity" spacing="30.0">
-               <Button fx:id="clearButton" focusTraversable="false" mnemonicParsing="false" prefHeight="36.0" prefWidth="166.0" text="Clear">
+               <Button fx:id="clearButton" focusTraversable="false" mnemonicParsing="false" prefHeight="36.0" prefWidth="180.0" text="Clear">
                   <cursor>
                      <Cursor fx:constant="HAND" />
                   </cursor>
@@ -74,7 +74,7 @@
                      <String fx:value="sec-btn" />
                   </styleClass>
                </Button>
-               <Button fx:id="ganttChartButton" disable="true" focusTraversable="false" mnemonicParsing="false" prefHeight="36.0" prefWidth="166.0" text="Generate Gantt Chart">
+               <Button fx:id="ganttChartButton" disable="true" focusTraversable="false" mnemonicParsing="false" prefHeight="36.0" prefWidth="180.0" text="Generate Gantt Chart">
                   <styleClass>
                      <String fx:value="accent" />
                      <String fx:value="main-btn" />
@@ -83,7 +83,7 @@
                      <Cursor fx:constant="HAND" />
                   </cursor>
                </Button>
-               <Button fx:id="reportButton" disable="true" focusTraversable="false" mnemonicParsing="false" prefHeight="36.0" prefWidth="166.0" text="Metrics">
+               <Button fx:id="reportButton" disable="true" focusTraversable="false" mnemonicParsing="false" prefHeight="36.0" prefWidth="180.0" text="Metrics">
                   <styleClass>
                      <String fx:value="accent" />
                      <String fx:value="main-btn" />
